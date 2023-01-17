@@ -96,5 +96,11 @@ main{
     background-color: red;
 }
 
+.newLi{
+    color: black;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.8rem;
 
+}
 

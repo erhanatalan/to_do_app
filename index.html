@@ -5,27 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>To Do App</title>
+    <title>To-Do App</title>
 </head>
 <body>
     <main>
-
         <div class="out-frame">
             <div class="clip">
 
             </div>
             <div class="subs">TO-DO LIST</div>
             <div class="in-frame">
-                <div class="content-box--left">
-                    
+                <div class="content-box--left" id="left_div">
+                    <ul class="left-list">
+
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="input-record">
-            <textarea name="" id="" placeholder="Write The Your List"></textarea>
-            <button type="submit" id="save"> << Add</button>
-            <button type="reset" id="clear">Clear</Clear></button>
-            <button id="delete">Delete >></button>
+            <textarea name="" id="textarea" placeholder="Write The Your List"></textarea>
+            <button type="submit" id="save" class="button save"> << Add</button>
+            <button type="reset" id="clear" class="button edit">Edit</button>
+            <button type="button" id="delete" class="button delete">Delete >></button>
 
         </div>
         <div class="out-frame">
