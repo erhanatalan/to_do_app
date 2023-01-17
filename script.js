@@ -1,41 +1,53 @@
 //! Variables and selectors
 
 const textarea = document.getElementById("textarea");
-const left_list = document.querySelector('.content-box--left');
-const right_list = document.querySelector('.content-box--right');
 const messageDiv = document.querySelector('.input-record');
 const left_liste = document.querySelector(".left-list");
+const li = document.querySelector(".newLi");
+console.log(li);
 const add = document.querySelector("#save");
+let now = new Date().toString().split("GMT+0300 (GMT+03:00)")[0]
 let userSelect;
-console.log(textarea.value);
-
-
-
+let count=localStorage.getItem("clickcount");
+console.log(count);
 
 //! Event Listeners
-
-
 add.addEventListener("click",(e)=>{
     if(e.target.getAttribute("id")=="save"){
         userSelect = e.target.getAttribute("id")
-        const newList = document.createElement("li");
-        newList.className="newLi";
-        const dolist = document.createTextNode(textarea.value);
-        newList.appendChild(dolist);
-        left_liste.appendChild(newList);
+        creatDiv()
     }
 })
 
-
+left_liste.addEventListener("click",(ev)=>{
+    if(ev.target.tagName="li"){
+        ev.target.classList.toggle("checked")
+    }
+})
 
 
 //! Functions
 
 function creatDiv(){
-    const newDiv = document.createElement('div');
-    const currentText = document.createTextNode(textarea.value)
-    newDiv.className = 'div-group-item';
-    newDiv.appendChild(currentText);
-    left_list.appendChild(newDiv);
+    const newList = document.createElement("li");
+    newList.className="newLi";
+    const dolist = document.createTextNode(textarea.value);
+    newList.appendChild(dolist);
+    left_liste.appendChild(newList);
+
+    const span= document.createElement("span");
+    const nowq = document.createTextNode(now);
+    span.className="date";
+    span.appendChild(nowq);
+    newList.appendChild(span);
+    //localStorage.setItem(`list ${count}`, JSON.stringify(newList))
+    //window.location.reload()
 }
 
+function clickCounter() {
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount)+1;
+  } else {
+    localStorage.clickcount = 1;
+  }
+}

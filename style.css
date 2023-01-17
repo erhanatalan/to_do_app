@@ -99,8 +99,28 @@ main{
 .newLi{
     color: black;
     text-align: left;
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
     font-size: 0.8rem;
-
+    border: 1px solid rgb(46, 123, 175);
 }
+
+.checked{
+    color: white;
+    background-color: red;
+}
+
+li{
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.date{
+    width: 250px;
+    text-align: right;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
 
