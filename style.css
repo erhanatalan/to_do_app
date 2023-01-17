@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: #cdcdaa;
+    background-image: linear-gradient(90deg, #cdcdaa 0%, #dcd7d8 100%);
+}
+main{
+    padding: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    text-align: center;
+}
+
+.subs{
+    /* border: 1px solid orange; */
+    height: 7vh;
+}
+.out-frame{
+    color: white;
+    font-size: 4vh;
+    background-color: grey;
+    display: flex;
+    display: inline-block;
+    border: 2px solid black;
+    width: 35vw;
+    height: 85vh;
+    min-width: 300px;
+    padding:0 20px 20px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.clip{
+    border: 3px solid black;
+    width: 50%;
+    height: 5%;
+    margin-top: 0;
+    margin: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.in-frame{
+    background-color:white ;
+    overflow: auto;
+    height:87%;
+    border: 2px solid blue;
+}
+
+.input-record{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 20px;
+    gap: 20px;
+    width:20vw;
+    min-width: 300px;
+    border: 2px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.input-record textarea{
+    width: 80%;
+    height: 20vh;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+#save, #clear, #delete{
+    background-color: orangered;
+    color: white;
+    font-size: 1.5rem;
+    width: 120px;
+    height: 45px;
+    border-radius: 25px;
+}
